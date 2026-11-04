@@ -8,12 +8,12 @@ export default function Index() {
   const { t } = useTranslation();
 
   return (
-    <View className="flex-1 items-center justify-center gap-4 bg-white dark:bg-neutral-900">
+    <View className="flex-1 items-center justify-center gap-4 bg-background dark:bg-background-dark">
       <Icon
         as={ShoppingCart}
-        className="size-12 text-green-600 dark:text-amber-600"
+        className="size-12 text-primary"
       />
-      <Text className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
+      <Text className="text-xl font-bold text-foreground dark:text-foreground-dark">
         {t("common.appTitle")}
       </Text>
     </View>
