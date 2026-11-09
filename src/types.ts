@@ -1,13 +1,14 @@
+import type { ProductKey } from "@/data/seedProducts";
 import type { Unit } from "@/data/units";
 import type { Language } from "@/i18n/resources";
 
-export type { Language, Unit };
+export type { Language, ProductKey, Unit };
 
 export type LanguageSetting = Language | "system";
 
 export interface Product {
   id: string;
-  key?: string;
+  key?: ProductKey;
   name?: string;
   defaultUnit: Unit;
   defaultQuantity: number;
@@ -33,7 +34,6 @@ export interface ShoppingList {
 }
 
 export interface PersistedState {
-  seedVersion: number;
   settings: {
     language: LanguageSetting;
   };

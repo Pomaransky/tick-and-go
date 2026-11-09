@@ -6,6 +6,22 @@
       "shopping": "Zakupy",
       "lists": "Listy",
       "products": "Produkty"
-    }
+    },
+    "productsEmpty": "Brak produktów",
+    "edit": "Edytuj",
+    "addProduct": "Dodaj produkt"
+  },
+  "products": {
+    "potato": "Ziemniaki",
+    "milk": "Mleko",
+    "blackTea": "Herbata czarna"
+  },
+  "units": {
+    "pcs": "szt.",
+    "kg": "kg",
+    "g": "g",
+    "l": "l",
+    "ml": "ml",
+    "pack": "opak."
   }
 }

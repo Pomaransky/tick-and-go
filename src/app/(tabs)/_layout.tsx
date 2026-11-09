@@ -14,7 +14,7 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         headerRight: () => <SettingsButton />,
-        tabBarActiveTintColor: colors.primary,
+        tabBarActiveTintColor: colors.primary.DEFAULT,
         tabBarInactiveTintColor:
           colorScheme === "dark" ? colors.muted.dark : colors.muted.DEFAULT,
       }}

@@ -6,6 +6,22 @@
       "shopping": "Shopping",
       "lists": "Lists",
       "products": "Products"
-    }
+    },
+    "productsEmpty": "No products",
+    "edit": "Edit",
+    "addProduct": "Add product"
+  },
+  "products": {
+    "potato": "Potatoes",
+    "milk": "Milk",
+    "blackTea": "Black tea"
+  },
+  "units": {
+    "pcs": "pcs",
+    "kg": "kg",
+    "g": "g",
+    "l": "l",
+    "ml": "ml",
+    "pack": "pack"
   }
 }
