@@ -6,6 +6,47 @@
       "shopping": "Zakupy",
       "lists": "Listy",
       "products": "Produkty"
+    },
+    "productsEmpty": "Brak produktów",
+    "edit": "Edytuj",
+    "addProduct": "Dodaj produkt",
+    "save": "Zapisz",
+    "close": "Zamknij",
+    "productForm": {
+      "newTitle": "Nowy produkt",
+      "name": "Nazwa",
+      "namePlaceholder": "np. Chleb",
+      "quantity": "Domyślna ilość",
+      "unit": "Jednostka",
+      "errors": {
+        "quantityInvalid": "Podaj ilość większą od zera",
+        "nameRequired": "Podaj nazwę produktu",
+        "nameDuplicate": "Produkt o tej nazwie już istnieje"
+      }
+    },
+    "placeInput": {
+      "label": "Miejsce zakupu/Sklep",
+      "placeholder": "np. Lidl, targ",
+      "save": "Zapisz miejsce"
     }
+  },
+  "places": {
+    "market": "Targ",
+    "bakery": "Piekarnia",
+    "lidl": "Lidl",
+    "biedronka": "Biedronka"
+  },
+  "products": {
+    "potato": "Ziemniaki",
+    "milk": "Mleko",
+    "blackTea": "Herbata czarna"
+  },
+  "units": {
+    "pcs": "szt.",
+    "kg": "kg",
+    "g": "g",
+    "l": "l",
+    "ml": "ml",
+    "pack": "opak."
   }
 }

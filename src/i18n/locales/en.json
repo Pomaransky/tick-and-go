@@ -6,6 +6,47 @@
       "shopping": "Shopping",
       "lists": "Lists",
       "products": "Products"
+    },
+    "productsEmpty": "No products",
+    "edit": "Edit",
+    "addProduct": "Add product",
+    "save": "Save",
+    "close": "Close",
+    "productForm": {
+      "newTitle": "New product",
+      "name": "Name",
+      "namePlaceholder": "e.g. Bread",
+      "quantity": "Default quantity",
+      "unit": "Unit",
+      "errors": {
+        "quantityInvalid": "Enter a quantity greater than zero",
+        "nameRequired": "Enter a product name",
+        "nameDuplicate": "A product with this name already exists"
+      }
+    },
+    "placeInput": {
+      "label": "Place of purchase/Store",
+      "placeholder": "e.g. Lidl, market",
+      "save": "Save place"
     }
+  },
+  "places": {
+    "market": "Market",
+    "bakery": "Bakery",
+    "lidl": "Lidl",
+    "biedronka": "Biedronka"
+  },
+  "products": {
+    "potato": "Potatoes",
+    "milk": "Milk",
+    "blackTea": "Black tea"
+  },
+  "units": {
+    "pcs": "pcs",
+    "kg": "kg",
+    "g": "g",
+    "l": "l",
+    "ml": "ml",
+    "pack": "pack"
   }
 }

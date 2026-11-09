@@ -1,23 +1,29 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
-import type { PersistedState } from "@/types";
+import type { PersistedState } from "@/store/types";
 
+import { applySeed } from "./seed";
 import { mmkvStorage } from "./storage";
 
-const initialState: PersistedState = {
-  seedVersion: 0,
+const initialState: PersistedState = applySeed({
   settings: {
     language: "system",
   },
   products: {},
+  places: {},
   lists: {},
-};
+});
 
 export const useAppStore = create<PersistedState>()(
   persist(() => initialState, {
     name: "app-state",
     storage: createJSONStorage(() => mmkvStorage),
     version: 1,
+    merge: (persistedState, currentState) =>
+      applySeed({
+        ...currentState,
+        ...(persistedState as Partial<PersistedState>),
+      }),
   }),
 );

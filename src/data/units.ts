@@ -1,3 +1,10 @@
-export const units = ["pcs", "kg", "g", "l", "ml", "pack"] as const;
+export enum Unit {
+  PCS = "pcs",
+  KG = "kg",
+  G = "g",
+  L = "l",
+  ML = "ml",
+  PACK = "pack",
+}
 
-export type Unit = (typeof units)[number];
+export const units = Object.values(Unit);
