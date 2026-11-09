@@ -1,5 +1,11 @@
 {
   "common": {
-    "appTitle": "Tick & Go: Fast Shopping"
+    "appTitle": "Tick & Go: Fast Shopping",
+    "settings": "Settings",
+    "tabs": {
+      "shopping": "Shopping",
+      "lists": "Lists",
+      "products": "Products"
+    }
   }
 }

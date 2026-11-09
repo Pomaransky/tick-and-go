@@ -1,6 +1,6 @@
 import { act, render, screen } from "@testing-library/react-native";
 
-import Index from "@/app/index";
+import Index from "@/app/(tabs)/index";
 import i18n from "@/i18n";
 
 describe("Home screen", () => {
