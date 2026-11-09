@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import type { SuggestionItem } from "@/features/search/useSuggestions";
+import type { SuggestionItem } from "@/features/search/types";
 import { useAppStore } from "@/store/useAppStore";
 
-import { getPlaceName } from "./format";
+import { getPlaceName } from "@/features/places/utils/getPlaceName";
 
 export function usePlaces(): SuggestionItem[] {
   const { t } = useTranslation();

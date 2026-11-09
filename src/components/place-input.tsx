@@ -4,8 +4,8 @@ import { Text, View } from "react-native";
 import { Checkbox } from "@/components/checkbox";
 import { Input } from "@/components/input";
 import { SuggestionChips } from "@/components/suggestion-chips";
-import { usePlaces } from "@/features/places/usePlaces";
-import { useSuggestions } from "@/features/search/useSuggestions";
+import { usePlaces } from "@/features/places/hooks/usePlaces";
+import { useSuggestions } from "@/features/search/hooks/useSuggestions";
 
 interface PlaceInputProps {
   value: string;

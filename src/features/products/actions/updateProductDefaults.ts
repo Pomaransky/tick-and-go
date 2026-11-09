@@ -1,6 +1,5 @@
+import type { ProductDefaults } from "@/features/products/productSchemas";
 import { useAppStore } from "@/store/useAppStore";
-
-import type { ProductDefaults } from "./productDefaultsSchema";
 
 export function updateProductDefaults(id: string, defaults: ProductDefaults) {
   useAppStore.setState((state) => {

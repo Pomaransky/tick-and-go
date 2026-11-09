@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import { FlatList, Pressable, Text, View } from "react-native";
 
 import { Icon } from "@/components/icon";
-import { formatQuantity } from "@/features/products/format";
-import { useProducts } from "@/features/products/useProducts";
+import { useProducts } from "@/features/products/hooks/useProducts";
+import { formatQuantity } from "@/features/products/utils/formatQuantity";
 
 export default function Products() {
   const { t, i18n } = useTranslation();
@@ -59,7 +59,7 @@ export default function Products() {
         accessibilityLabel={t("common.addProduct")}
         accessibilityRole="button"
         className="absolute bottom-4 right-4 size-16 items-center justify-center rounded-full bg-primary shadow-lg active:opacity-80"
-        onPress={() => console.log("add product")}
+        onPress={() => router.push("/products/new")}
       >
         <Icon as={Plus} className="size-18 text-primary-foreground" />
       </Pressable>

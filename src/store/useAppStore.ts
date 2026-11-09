@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
-import type { PersistedState } from "@/types";
+import type { PersistedState } from "@/store/types";
 
 import { applySeed } from "./seed";
 import { mmkvStorage } from "./storage";

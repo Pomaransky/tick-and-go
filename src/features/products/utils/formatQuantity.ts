@@ -1,13 +1,6 @@
 import type { TFunction } from "i18next";
 
-import type { Product, Unit } from "@/types";
-
-export function getProductName(product: Product, t: TFunction): string {
-  if (product.key) {
-    return t(`products.${product.key}`);
-  }
-  return product.name ?? "";
-}
+import type { Unit } from "@/data/units";
 
 export function formatQuantity(
   quantity: number,

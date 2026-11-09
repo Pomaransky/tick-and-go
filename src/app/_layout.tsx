@@ -5,6 +5,12 @@ import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from "expo-router";
 import { useTranslation } from "react-i18next";
 import { useColorScheme } from "react-native";
 
+const formSheetOptions = {
+  presentation: "formSheet",
+  sheetAllowedDetents: "fitToContents",
+  sheetGrabberVisible: true,
+} as const;
+
 export default function RootLayout() {
   const { t } = useTranslation();
   const colorScheme = useColorScheme();
@@ -17,14 +23,8 @@ export default function RootLayout() {
           name="settings"
           options={{ title: t("common.settings") }}
         />
-        <Stack.Screen
-          name="products/[id]"
-          options={{
-            presentation: "formSheet",
-            sheetAllowedDetents: "fitToContents",
-            sheetGrabberVisible: true,
-          }}
-        />
+        <Stack.Screen name="products/[id]" options={formSheetOptions} />
+        <Stack.Screen name="products/new" options={formSheetOptions} />
       </Stack>
     </ThemeProvider>
   );

@@ -1,6 +1,6 @@
 import type { TFunction } from "i18next";
 
-import type { Place } from "@/types";
+import type { Place } from "@/features/places/types";
 
 export function getPlaceName(place: Place, t: TFunction): string {
   if (place.key) {

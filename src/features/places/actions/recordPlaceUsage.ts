@@ -1,8 +1,7 @@
+import { getPlaceName } from "@/features/places/utils/getPlaceName";
 import i18n from "@/i18n";
 import { useAppStore } from "@/store/useAppStore";
 import { normalizeText } from "@/utils/normalizeText";
-
-import { getPlaceName } from "./format";
 
 export function recordPlaceUsage(name: string, save: boolean) {
   const normalizedName = normalizeText(name);

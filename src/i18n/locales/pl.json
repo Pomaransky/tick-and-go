@@ -13,9 +13,16 @@
     "save": "Zapisz",
     "close": "Zamknij",
     "productForm": {
+      "newTitle": "Nowy produkt",
+      "name": "Nazwa",
+      "namePlaceholder": "np. Chleb",
       "quantity": "Domyślna ilość",
-      "quantityError": "Podaj ilość większą od zera",
-      "unit": "Jednostka"
+      "unit": "Jednostka",
+      "errors": {
+        "quantityInvalid": "Podaj ilość większą od zera",
+        "nameRequired": "Podaj nazwę produktu",
+        "nameDuplicate": "Produkt o tej nazwie już istnieje"
+      }
     },
     "placeInput": {
       "label": "Miejsce zakupu/Sklep",

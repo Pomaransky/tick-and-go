@@ -1,6 +1,8 @@
 import { seedPlaceId, seedPlaces } from "@/data/seedPlaces";
 import { seedProductId, seedProducts } from "@/data/seedProducts";
-import type { PersistedState, Place, Product } from "@/types";
+import type { Place } from "@/features/places/types";
+import type { Product } from "@/features/products/types";
+import type { PersistedState } from "@/store/types";
 
 export function applySeed(state: PersistedState): PersistedState {
   const products: Record<string, Product> = { ...state.products };

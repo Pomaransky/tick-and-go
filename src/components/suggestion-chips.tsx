@@ -1,7 +1,7 @@
 import { ScrollView } from "react-native";
 
 import { Chip } from "@/components/chip";
-import type { SuggestionItem } from "@/features/search/useSuggestions";
+import type { SuggestionItem } from "@/features/search/types";
 import { normalizeText } from "@/utils/normalizeText";
 
 interface SuggestionChipsProps<T extends SuggestionItem> {

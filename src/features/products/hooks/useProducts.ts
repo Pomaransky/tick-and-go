@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 
 import { seedProductId, seedProducts } from "@/data/seedProducts";
 import { useAppStore } from "@/store/useAppStore";
-import type { Product } from "@/types";
+import type { Product } from "@/features/products/types";
 
-import { getProductName } from "./format";
+import { getProductName } from "@/features/products/utils/getProductName";
 
 export interface ProductWithName {
   product: Product;
