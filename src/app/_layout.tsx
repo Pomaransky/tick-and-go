@@ -17,6 +17,14 @@ export default function RootLayout() {
           name="settings"
           options={{ title: t("common.settings") }}
         />
+        <Stack.Screen
+          name="products/[id]"
+          options={{
+            presentation: "formSheet",
+            sheetAllowedDetents: "fitToContents",
+            sheetGrabberVisible: true,
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );

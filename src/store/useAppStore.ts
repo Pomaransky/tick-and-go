@@ -11,6 +11,7 @@ const initialState: PersistedState = applySeed({
     language: "system",
   },
   products: {},
+  places: {},
   lists: {},
 });
 

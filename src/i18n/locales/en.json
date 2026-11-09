@@ -9,7 +9,25 @@
     },
     "productsEmpty": "No products",
     "edit": "Edit",
-    "addProduct": "Add product"
+    "addProduct": "Add product",
+    "save": "Save",
+    "close": "Close",
+    "productForm": {
+      "quantity": "Default quantity",
+      "quantityError": "Enter a quantity greater than zero",
+      "unit": "Unit"
+    },
+    "placeInput": {
+      "label": "Place of purchase/Store",
+      "placeholder": "e.g. Lidl, market",
+      "save": "Save place"
+    }
+  },
+  "places": {
+    "market": "Market",
+    "bakery": "Bakery",
+    "lidl": "Lidl",
+    "biedronka": "Biedronka"
   },
   "products": {
     "potato": "Potatoes",

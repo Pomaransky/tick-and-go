@@ -1,8 +1,9 @@
+import type { PlaceKey } from "@/data/seedPlaces";
 import type { ProductKey } from "@/data/seedProducts";
 import type { Unit } from "@/data/units";
 import type { Language } from "@/i18n/resources";
 
-export type { Language, ProductKey, Unit };
+export type { Language, PlaceKey, ProductKey, Unit };
 
 export type LanguageSetting = Language | "system";
 
@@ -13,6 +14,13 @@ export interface Product {
   defaultUnit: Unit;
   defaultQuantity: number;
   defaultPlace?: string;
+  usageCount: number;
+}
+
+export interface Place {
+  id: string;
+  key?: PlaceKey;
+  name?: string;
   usageCount: number;
 }
 
@@ -38,5 +46,6 @@ export interface PersistedState {
     language: LanguageSetting;
   };
   products: Record<string, Product>;
+  places: Record<string, Place>;
   lists: Record<string, ShoppingList>;
 }

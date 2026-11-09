@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import { Pencil, Plus } from "lucide-react-native";
 import { useTranslation } from "react-i18next";
 import { FlatList, Pressable, Text, View } from "react-native";
@@ -34,7 +35,12 @@ export default function Products() {
               accessibilityRole="button"
               className="p-2"
               hitSlop={8}
-              onPress={() => console.log("edit product", item.product.id)}
+              onPress={() =>
+                router.push({
+                  pathname: "/products/[id]",
+                  params: { id: item.product.id },
+                })
+              }
             >
               <Icon
                 as={Pencil}

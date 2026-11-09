@@ -9,7 +9,25 @@
     },
     "productsEmpty": "Brak produktów",
     "edit": "Edytuj",
-    "addProduct": "Dodaj produkt"
+    "addProduct": "Dodaj produkt",
+    "save": "Zapisz",
+    "close": "Zamknij",
+    "productForm": {
+      "quantity": "Domyślna ilość",
+      "quantityError": "Podaj ilość większą od zera",
+      "unit": "Jednostka"
+    },
+    "placeInput": {
+      "label": "Miejsce zakupu/Sklep",
+      "placeholder": "np. Lidl, targ",
+      "save": "Zapisz miejsce"
+    }
+  },
+  "places": {
+    "market": "Targ",
+    "bakery": "Piekarnia",
+    "lidl": "Lidl",
+    "biedronka": "Biedronka"
   },
   "products": {
     "potato": "Ziemniaki",
