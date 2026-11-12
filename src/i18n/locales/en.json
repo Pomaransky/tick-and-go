@@ -8,7 +8,9 @@
       "products": "Products"
     },
     "productsEmpty": "No products",
+    "listsEmpty": "No lists",
     "edit": "Edit",
+    "delete": "Delete",
     "addProduct": "Add product",
     "save": "Save",
     "close": "Close",
@@ -23,6 +25,29 @@
         "nameRequired": "Enter a product name",
         "nameDuplicate": "A product with this name already exists"
       }
+    },
+    "addList": "Add list",
+    "listForm": {
+      "newTitle": "New list",
+      "name": "Name",
+      "namePlaceholder": "e.g. Weekend shopping",
+      "create": "Create",
+      "errors": {
+        "nameRequired": "Enter a list name"
+      }
+    },
+    "listEditor": {
+      "searchPlaceholder": "Search or type a product",
+      "add": "Add product to list",
+      "empty": "The list is empty",
+      "markBought": "Mark as bought"
+    },
+    "addItem": {
+      "newTitle": "New product",
+      "quantity": "Quantity",
+      "submit": "Add to list",
+      "setDefault": "Set as default",
+      "saveProduct": "Save to product catalog"
     },
     "placeInput": {
       "label": "Place of purchase/Store",

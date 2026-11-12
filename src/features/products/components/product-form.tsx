@@ -1,14 +1,13 @@
 import { router } from "expo-router";
-import { X } from "lucide-react-native";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Pressable, Text, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { View } from "react-native";
 import type { z } from "zod";
 
+import { Checkbox } from "@/components/checkbox";
 import { Chip } from "@/components/chip";
 import { Field } from "@/components/field";
-import { Icon } from "@/components/icon";
+import { FormSheet } from "@/components/form-sheet";
 import { Input } from "@/components/input";
 import { PlaceInput } from "@/components/place-input";
 import { units } from "@/data/units";
@@ -28,7 +27,10 @@ interface ProductFormProps<TOutput extends ProductDefaults> {
   initialValues: ProductFormValues;
   schema: z.ZodType<TOutput>;
   showName?: boolean;
-  onSubmit: (data: TOutput) => void;
+  quantityLabel?: string;
+  submitLabel?: string;
+  toggleLabel?: string;
+  onSubmit: (data: TOutput, toggled: boolean) => void;
 }
 
 export function ProductForm<TOutput extends ProductDefaults>({
@@ -36,12 +38,15 @@ export function ProductForm<TOutput extends ProductDefaults>({
   initialValues,
   schema,
   showName = false,
+  quantityLabel,
+  submitLabel,
+  toggleLabel,
   onSubmit,
 }: ProductFormProps<TOutput>) {
   const { t } = useTranslation();
-  const insets = useSafeAreaInsets();
   const [form, setForm] = useState(initialValues);
   const [errors, setErrors] = useState<FieldErrors>({});
+  const [toggled, setToggled] = useState(false);
 
   const setField = <K extends keyof ProductFormValues>(
     field: K,
@@ -67,7 +72,7 @@ export function ProductForm<TOutput extends ProductDefaults>({
       setErrors(nextErrors);
       return;
     }
-    onSubmit(result.data);
+    onSubmit(result.data, toggled);
     if (result.data.place) {
       recordPlaceUsage(result.data.place, result.data.savePlace);
     }
@@ -75,32 +80,15 @@ export function ProductForm<TOutput extends ProductDefaults>({
   };
 
   return (
-    <View
-      className="gap-5 bg-background p-6 dark:bg-background-dark"
-      style={{ paddingBottom: insets.bottom + 24 }}
+    <FormSheet
+      title={title}
+      submitLabel={submitLabel ?? t("common.save")}
+      onSubmit={save}
     >
-      <View className="flex-row items-center justify-between gap-3">
-        <Text className="flex-1 text-xl font-bold text-foreground dark:text-foreground-dark">
-          {title}
-        </Text>
-        <Pressable
-          accessibilityLabel={t("common.close")}
-          accessibilityRole="button"
-          className="-mr-2 p-2"
-          hitSlop={8}
-          onPress={() => router.back()}
-        >
-          <Icon
-            as={X}
-            className="size-6 text-foreground dark:text-foreground-dark"
-          />
-        </Pressable>
-      </View>
-
       {showName && (
         <Field label={t("common.productForm.name")} error={errorText("name")}>
           <Input
-            autoFocus
+            autoFocus={!initialValues.name}
             placeholder={t("common.productForm.namePlaceholder")}
             value={form.name}
             onChangeText={(name) => setField("name", name)}
@@ -109,7 +97,7 @@ export function ProductForm<TOutput extends ProductDefaults>({
       )}
 
       <Field
-        label={t("common.productForm.quantity")}
+        label={quantityLabel ?? t("common.productForm.quantity")}
         error={errorText("quantity")}
       >
         <Input
@@ -139,15 +127,9 @@ export function ProductForm<TOutput extends ProductDefaults>({
         onSavePlaceChange={(savePlace) => setField("savePlace", savePlace)}
       />
 
-      <Pressable
-        accessibilityRole="button"
-        className="items-center rounded-lg bg-primary py-3 active:opacity-80"
-        onPress={save}
-      >
-        <Text className="text-base font-semibold text-primary-foreground">
-          {t("common.save")}
-        </Text>
-      </Pressable>
-    </View>
+      {toggleLabel && (
+        <Checkbox label={toggleLabel} checked={toggled} onChange={setToggled} />
+      )}
+    </FormSheet>
   );
 }
