@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Otwieranie udostępnionej listy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      background-color: #171717;
+      color: #f5f5f5;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background-color: #16a34a;
+      color: #f5f5f5;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Opening list in app...</h2>
+  <p id="info-text">If the app didn't open automatically, click the button below.</p>
+  <a id="open-btn" class="btn" href="#">Open in app</a>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const data = params.get('data');
+    
+    if (data) {
+      const appUrl = `tickandgo://import?data=${encodeURIComponent(data)}`;
+      document.getElementById('open-btn').href = appUrl;
+      window.location.href = appUrl;
+    } else {
+      document.querySelector('h2').textContent = 'No data in link';
+      document.getElementById('open-btn').style.display = 'none';
+      document.getElementById('info-text').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

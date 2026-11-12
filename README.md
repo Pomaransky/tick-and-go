@@ -1,1 +1,0 @@
-# Welcome to Tick & Go: Fast Shopping
