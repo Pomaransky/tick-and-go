@@ -8,7 +8,9 @@
       "products": "Produkty"
     },
     "productsEmpty": "Brak produktów",
+    "listsEmpty": "Brak list",
     "edit": "Edytuj",
+    "delete": "Usuń",
     "addProduct": "Dodaj produkt",
     "save": "Zapisz",
     "close": "Zamknij",
@@ -23,6 +25,29 @@
         "nameRequired": "Podaj nazwę produktu",
         "nameDuplicate": "Produkt o tej nazwie już istnieje"
       }
+    },
+    "addList": "Dodaj listę",
+    "listForm": {
+      "newTitle": "Nowa lista",
+      "name": "Nazwa",
+      "namePlaceholder": "np. Zakupy na weekend",
+      "create": "Utwórz",
+      "errors": {
+        "nameRequired": "Podaj nazwę listy"
+      }
+    },
+    "listEditor": {
+      "searchPlaceholder": "Szukaj lub wpisz produkt",
+      "add": "Dodaj produkt do listy",
+      "empty": "Lista jest pusta",
+      "markBought": "Oznacz jako kupione"
+    },
+    "addItem": {
+      "newTitle": "Nowy produkt",
+      "quantity": "Ilość",
+      "submit": "Dodaj do listy",
+      "setDefault": "Ustaw jako domyślne",
+      "saveProduct": "Zapisz w katalogu produktów"
     },
     "placeInput": {
       "label": "Miejsce zakupu/Sklep",

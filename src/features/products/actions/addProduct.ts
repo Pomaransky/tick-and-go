@@ -3,7 +3,7 @@ import { randomUUID } from "expo-crypto";
 import type { NewProduct } from "@/features/products/productSchemas";
 import { useAppStore } from "@/store/useAppStore";
 
-export function addProduct(product: NewProduct) {
+export function addProduct(product: NewProduct): string {
   const id = randomUUID();
   useAppStore.setState((state) => ({
     products: {
@@ -18,4 +18,5 @@ export function addProduct(product: NewProduct) {
       },
     },
   }));
+  return id;
 }

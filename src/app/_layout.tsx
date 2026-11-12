@@ -25,6 +25,10 @@ export default function RootLayout() {
         />
         <Stack.Screen name="products/[id]" options={formSheetOptions} />
         <Stack.Screen name="products/new" options={formSheetOptions} />
+        <Stack.Screen name="lists/new" options={formSheetOptions} />
+        <Stack.Screen name="lists/[id]" />
+        <Stack.Screen name="lists/[id]/add" options={formSheetOptions} />
+        <Stack.Screen name="lists/[id]/edit" options={formSheetOptions} />
       </Stack>
     </ThemeProvider>
   );

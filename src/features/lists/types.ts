@@ -2,7 +2,8 @@ import type { Unit } from "@/data/units";
 
 export interface ListItem {
   id: string;
-  productId: string;
+  productId?: string;
+  name?: string;
   quantity: number;
   unit: Unit;
   checked: boolean;
