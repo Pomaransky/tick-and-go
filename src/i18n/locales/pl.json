@@ -40,7 +40,13 @@
       "searchPlaceholder": "Szukaj lub wpisz produkt",
       "add": "Dodaj produkt do listy",
       "empty": "Lista jest pusta",
-      "markBought": "Oznacz jako kupione"
+      "markBought": "Oznacz jako kupione",
+      "share": "Udostępnij listę",
+      "shareMessage": "Sprawdź moją listę: {{url}}"
+    },
+    "listImport": {
+      "title": "Import listy",
+      "invalid": "Ten link do listy jest nieprawidłowy lub uszkodzony."
     },
     "addItem": {
       "newTitle": "Nowy produkt",
@@ -59,7 +65,8 @@
     "market": "Targ",
     "bakery": "Piekarnia",
     "lidl": "Lidl",
-    "biedronka": "Biedronka"
+    "biedronka": "Biedronka",
+    "other": "Inne"
   },
   "products": {
     "potato": "Ziemniaki",

@@ -1,7 +1,6 @@
-import { randomUUID } from "expo-crypto";
-
 import type { ListItem } from "@/features/lists/types";
 import { useAppStore } from "@/store/useAppStore";
+import { generateShortId } from "@/utils/generateShortId";
 
 export function addListItem(
   listId: string,
@@ -20,15 +19,14 @@ export function addListItem(
         ...state.lists,
         [listId]: {
           ...list,
-          items: [...list.items, { ...item, id: randomUUID(), checked: false }],
-          updatedAt: Date.now(),
+          items: [...list.items, { ...item, id: generateShortId(), checked: false }],
         },
       },
       products: product
         ? {
-            ...state.products,
-            [product.id]: { ...product, usageCount: product.usageCount + 1 },
-          }
+          ...state.products,
+          [product.id]: { ...product, usageCount: product.usageCount + 1 },
+        }
         : state.products,
     };
   });
