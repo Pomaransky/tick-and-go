@@ -12,7 +12,6 @@ export function removeListItem(listId: string, itemId: string) {
         [listId]: {
           ...list,
           items: list.items.filter((item) => item.id !== itemId),
-          updatedAt: Date.now(),
         },
       },
     };

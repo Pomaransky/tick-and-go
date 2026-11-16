@@ -15,5 +15,4 @@ export interface ShoppingList {
   name: string;
   items: ListItem[];
   createdAt: number;
-  updatedAt: number;
 }

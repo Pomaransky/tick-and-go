@@ -19,7 +19,6 @@ export function updateListItem(
           items: list.items.map((item) =>
             item.id === itemId ? { ...item, ...changes } : item,
           ),
-          updatedAt: Date.now(),
         },
       },
     };

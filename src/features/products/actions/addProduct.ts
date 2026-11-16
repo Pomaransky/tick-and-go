@@ -1,10 +1,10 @@
-import { randomUUID } from "expo-crypto";
-
 import type { NewProduct } from "@/features/products/productSchemas";
 import { useAppStore } from "@/store/useAppStore";
+import { generateShortId } from "@/utils/generateShortId";
 
 export function addProduct(product: NewProduct): string {
-  const id = randomUUID();
+  const id = generateShortId();
+
   useAppStore.setState((state) => ({
     products: {
       ...state.products,

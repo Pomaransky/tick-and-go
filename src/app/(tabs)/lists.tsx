@@ -1,9 +1,10 @@
 import { router } from "expo-router";
-import { Plus } from "lucide-react-native";
+import { Plus, Trash2 } from "lucide-react-native";
 import { useTranslation } from "react-i18next";
 import { FlatList, Pressable, Text, View } from "react-native";
 
 import { Icon } from "@/components/icon";
+import { removeList } from "@/features/lists/actions/removeList";
 import { useLists } from "@/features/lists/hooks/useLists";
 import { formatDate } from "@/utils/formatDate";
 
@@ -25,6 +26,15 @@ export default function Lists() {
               router.push({ pathname: "/lists/[id]", params: { id: item.id } })
             }
           >
+            <Pressable
+              accessibilityLabel={t("common.delete")}
+              accessibilityRole="button"
+              className="p-2"
+              hitSlop={4}
+              onPress={() => removeList(item.id)}
+            >
+              <Icon as={Trash2} className="size-5 text-danger" />
+            </Pressable>
             <Text className="flex-1 text-base text-foreground dark:text-foreground-dark">
               {item.name}
             </Text>

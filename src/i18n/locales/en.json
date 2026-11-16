@@ -40,7 +40,13 @@
       "searchPlaceholder": "Search or type a product",
       "add": "Add product to list",
       "empty": "The list is empty",
-      "markBought": "Mark as bought"
+      "markBought": "Mark as bought",
+      "share": "Share list",
+      "shareMessage": "Check out my list: {{url}}"
+    },
+    "listImport": {
+      "title": "Import list",
+      "invalid": "This share link is invalid or damaged."
     },
     "addItem": {
       "newTitle": "New product",
@@ -59,7 +65,8 @@
     "market": "Market",
     "bakery": "Bakery",
     "lidl": "Lidl",
-    "biedronka": "Biedronka"
+    "biedronka": "Biedronka",
+    "other": "Other"
   },
   "products": {
     "potato": "Potatoes",
